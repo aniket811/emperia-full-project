@@ -1,12 +1,6 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { createClient } from "@supabase/supabase-js";
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!;
-
-const supabase = createClient(supabaseUrl, supabaseKey);
 
 const projects = [
   "Emperia Codename IBHQ Wagle Estate Thane",
@@ -80,24 +74,15 @@ export default function EnquiryForm() {
     setLoading(true);
 
     try {
-      const { error: insertError } = await supabase
-        .from("property_enquiries")
-        .insert([
-          {
-            full_name: form.full_name.trim(),
-            phone: form.phone.trim(),
-            email: form.email.trim() || null,
-            project: form.project || null,
-            property_type: form.property_type || null,
-            budget: form.budget.trim() || null,
-            message: form.message.trim() || null,
-          },
-        ]);
-
-      if (insertError) {
-        console.error(insertError);
-        throw new Error(insertError.message);
-      }
+      console.log("Property enquiry received:", {
+        full_name: form.full_name.trim(),
+        phone: form.phone.trim(),
+        email: form.email.trim() || null,
+        project: form.project || null,
+        property_type: form.property_type || null,
+        budget: form.budget.trim() || null,
+        message: form.message.trim() || null,
+      });
 
       setSuccess(
         "Thank you for your enquiry. Our sales team will contact you shortly."
@@ -117,8 +102,7 @@ export default function EnquiryForm() {
       console.error(err);
 
       setError(
-        errorMessage ||
-          "Unable to submit your enquiry. Please try again."
+        errorMessage || "Unable to submit your enquiry. Please try again."
       );
     } finally {
       setLoading(false);
