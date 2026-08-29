@@ -7,7 +7,7 @@ export default function Location() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <p className="text-xl md:text-2xl leading-relaxed text-gray-600 mb-10">
-              Strategically located in the heart of the city's most rapidly developing areas, ensuring excellent connectivity, high ROI, and convenience.
+              Strategically located in the heart of the city&apos;s most rapidly developing areas, ensuring excellent connectivity, high ROI, and convenience.
             </p>
             <div className="flex flex-col gap-8">
               {[

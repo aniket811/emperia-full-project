@@ -27,7 +27,7 @@ export default function ChevronMasks() {
   return (
     <section className="py-16 md:py-24 px-6 md:px-10 max-w-[1400px] mx-auto bg-white text-center flex flex-col items-center overflow-hidden">
       <h2 className="text-[clamp(1.8rem,4vw,3.5rem)] font-medium text-[#111] leading-tight tracking-tight mb-10 md:mb-16">
-        This isn't just <span className="text-gray-400">about real estate.</span>
+        This isn&apos;t just <span className="text-gray-400">about real estate.</span>
       </h2>
 
       <div className="flex gap-1 md:gap-2 justify-center items-center w-full max-w-[1200px] mb-10 md:mb-16 h-[300px] md:h-[500px]">
@@ -55,10 +55,10 @@ export default function ChevronMasks() {
 
       <div className="max-w-3xl text-center">
         <p className="text-lg md:text-xl font-medium text-[#111] mb-2">
-          It's about identity. Progress. Getting unstuck.
+          It&apos;s about identity. Progress. Getting unstuck.
         </p>
         <p className="text-lg md:text-xl font-medium text-gray-400">
-          You're not just looking for a place. You're looking for alignment. That's what we help you find.
+          You&apos;re not just looking for a place. You&apos;re looking for alignment. That&apos;s what we help you find.
         </p>
       </div>
     </section>

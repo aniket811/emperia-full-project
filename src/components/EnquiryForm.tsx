@@ -112,11 +112,12 @@ export default function EnquiryForm() {
         budget: "",
         message: "",
       });
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const errorMessage = err instanceof Error ? err.message : "Unknown error";
       console.error(err);
 
       setError(
-        err?.message ||
+        errorMessage ||
           "Unable to submit your enquiry. Please try again."
       );
     } finally {
@@ -302,9 +303,4 @@ export default function EnquiryForm() {
       </div>
     </section>
   );
-}<a
-  href="#enquiry"
-  className="inline-flex rounded-full bg-black px-6 py-3 font-semibold text-white transition hover:bg-gray-800"
->
-  Make an Enquiry →
-</a>
+}
