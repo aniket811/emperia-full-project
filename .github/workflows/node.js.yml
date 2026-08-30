@@ -41,5 +41,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
-          server-dir: /public_html/w41.adf.mytemp.website/sagarrajguru/
+          server-dir: /public_html/w41.adf.mytemp.website/
           local-dir: ./out/
