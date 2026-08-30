@@ -2,6 +2,8 @@
 
 import { FormEvent, useState } from "react";
 
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mdeoobel";
+
 const projects = [
   "Emperia Codename IBHQ Wagle Estate Thane",
   "Emperia IBHQ Wagle Estate Thane West",
@@ -74,15 +76,30 @@ export default function EnquiryForm() {
     setLoading(true);
 
     try {
-      console.log("Property enquiry received:", {
-        full_name: form.full_name.trim(),
-        phone: form.phone.trim(),
-        email: form.email.trim() || null,
-        project: form.project || null,
-        property_type: form.property_type || null,
-        budget: form.budget.trim() || null,
-        message: form.message.trim() || null,
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          full_name: form.full_name.trim(),
+          phone: form.phone.trim(),
+          email: form.email.trim(),
+          project: form.project,
+          property_type: form.property_type,
+          budget: form.budget.trim(),
+          message: form.message.trim(),
+        }),
       });
+
+      if (!response.ok) {
+        const result = await response.json().catch(() => null);
+        throw new Error(
+          result?.errors?.[0]?.message ||
+            "Unable to submit your enquiry. Please try again."
+        );
+      }
 
       setSuccess(
         "Thank you for your enquiry. Our sales team will contact you shortly."
@@ -98,11 +115,12 @@ export default function EnquiryForm() {
         message: "",
       });
     } catch (err: unknown) {
-      const errorMessage = err instanceof Error ? err.message : "Unknown error";
       console.error(err);
 
       setError(
-        errorMessage || "Unable to submit your enquiry. Please try again."
+        err instanceof Error
+          ? err.message
+          : "Unable to submit your enquiry. Please try again."
       );
     } finally {
       setLoading(false);
@@ -287,4 +305,9 @@ export default function EnquiryForm() {
       </div>
     </section>
   );
-}
+}<a
+  href="#enquiry"
+  className="inline-flex rounded-full bg-black px-6 py-3 font-semibold text-white transition hover:bg-gray-800"
+>
+  Make an Enquiry →
+</a>
