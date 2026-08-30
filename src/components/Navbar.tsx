@@ -52,7 +52,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <img
-            src="/Emperia For logo.png"
+            src="/Emperia-For-Logo.png"
             alt="Emperia Logo"
             className="h-8 md:h-10 w-auto object-contain"
           />
