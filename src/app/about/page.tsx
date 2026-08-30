@@ -13,7 +13,7 @@ export default function AboutPage() {
       {/* HERO */}
       <section className="hero">
         <Image
-          src="/abouts.jpeg"
+          src="/about.jpeg"
           alt="Emperia About Us"
           fill
           priority
