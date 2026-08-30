@@ -14,6 +14,7 @@ const navLinks = [
 
 export default function Navbar() {
   const { scrollY } = useScroll();
+
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,17 +22,15 @@ export default function Navbar() {
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() ?? 0;
 
+    // Hide navbar while scrolling down
     if (latest > previous && latest > 150 && !isMobileMenuOpen) {
       setHidden(true);
     } else {
       setHidden(false);
     }
 
-    if (latest > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
+    // Change navbar appearance after scrolling
+    setScrolled(latest > 50);
   });
 
   return (
@@ -48,7 +47,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="w-full max-w-[1400px] mx-auto px-6 md:px-10 h-16 md:h-20 flex justify-between items-center">
+      <div className="w-full max-w-[1400px] mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <img
@@ -58,55 +57,84 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center gap-1 bg-black/[0.04] p-1.5 rounded-full border border-black/5">
+        {/* Desktop Navigation */}
+        <div
+          className={`hidden md:flex items-center gap-1 p-1.5 rounded-full border transition-all duration-300 ${
+            scrolled
+              ? "bg-black/[0.04] border-black/5"
+              : "bg-black/10 border-white/20 backdrop-blur-sm"
+          }`}
+        >
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-gray-700 hover:text-black hover:bg-white hover:shadow-sm transition-all duration-200"
+              className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
+                scrolled
+                  ? "text-gray-700 hover:text-black hover:bg-white hover:shadow-sm"
+                  : "text-white hover:text-black hover:bg-white hover:shadow-sm"
+              }`}
             >
               {link.name}
             </Link>
           ))}
         </div>
 
-        {/* CTA & Mobile Toggle */}
+        {/* CTA + Mobile Toggle */}
         <div className="flex items-center gap-3">
           <Link
             href="/enquiry"
             className="inline-flex items-center gap-2 bg-[#151515] hover:bg-black text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-sm transition-all duration-200"
           >
             <span>Enquiry</span>
-           
           </Link>
 
+          {/* Mobile Menu Button */}
           <button
             type="button"
             aria-label="Toggle menu"
-            className="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-full bg-black/5 border border-black/10 text-black transition-colors hover:bg-black/10"
+            aria-expanded={isMobileMenuOpen}
+            className={`md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10 rounded-full border transition-colors ${
+              isMobileMenuOpen
+                ? "bg-black/10 border-black/10"
+                : "bg-white/20 border-white/30 backdrop-blur-sm"
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <span
-              className={`block w-4 h-0.5 bg-black transition-transform duration-300 ${
-                isMobileMenuOpen ? "rotate-45 translate-y-2" : ""
+              className={`block w-4 h-0.5 transition-all duration-300 ${
+                isMobileMenuOpen
+                  ? "bg-black rotate-45 translate-y-2"
+                  : scrolled
+                    ? "bg-black"
+                    : "bg-white"
               }`}
             />
+
             <span
-              className={`block w-4 h-0.5 bg-black transition-opacity duration-300 ${
-                isMobileMenuOpen ? "opacity-0" : ""
+              className={`block w-4 h-0.5 transition-all duration-300 ${
+                isMobileMenuOpen
+                  ? "opacity-0"
+                  : scrolled
+                    ? "bg-black"
+                    : "bg-white"
               }`}
             />
+
             <span
-              className={`block w-4 h-0.5 bg-black transition-transform duration-300 ${
-                isMobileMenuOpen ? "-rotate-45 -translate-y-2" : ""
+              className={`block w-4 h-0.5 transition-all duration-300 ${
+                isMobileMenuOpen
+                  ? "bg-black -rotate-45 -translate-y-2"
+                  : scrolled
+                    ? "bg-black"
+                    : "bg-white"
               }`}
             />
           </button>
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
