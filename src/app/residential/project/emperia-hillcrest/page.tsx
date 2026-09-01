@@ -7,6 +7,15 @@ import Footer from "@/components/Footer";
 export default function EmperiaHillcrestPage() {
   const [showForm, setShowForm] = useState(false);
 
+const [index, setIndex] = useState(0);
+
+const images = [
+  "/21.png",
+  "/22.png",
+  "/23.png",
+  "/24.png",
+  "/25.png",
+];
   return (
     <main className="bg-white text-[#2d4050]">
       <Navbar />
@@ -46,7 +55,7 @@ export default function EmperiaHillcrestPage() {
           <div className="grid items-center gap-12 lg:grid-cols-12">
             <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-md lg:col-span-5">
               <img
-                src="https://emperiaworldprojects.com/images/hillcrest.webp"
+                src="/hill.png"
                 alt="Emperia Hillcrest Elevation"
                 className="h-[520px] w-full object-cover transition duration-700 hover:scale-105"
               />
@@ -58,11 +67,11 @@ export default function EmperiaHillcrestPage() {
               </h2>
 
               <p className="mt-5 text-[16px] leading-relaxed text-[#64748b]">
-                Inspired by the Roman culture of building an empire, Emperia Hillcrest defines complete magnanimous luxury and grandeur within your reach[cite: 2]. Crafted to bring you a regal experience, the project transforms everyday living into a serene sanctuary where nature meets architectural brilliance[cite: 2].
+                Inspired by the Roman culture of building an empire, Emperia Hillcrest defines complete magnanimous luxury and grandeur within your reach. Crafted to bring you a regal experience, the project transforms everyday living into a serene sanctuary where nature meets architectural brilliance.
               </p>
 
               <p className="mt-4 text-[16px] leading-relaxed text-[#64748b]">
-                Spanning a majestic 3.5 Acres layout in Shedung, Panvel, Emperia Hillcrest features an iconic Ground + 17 Storey tower, 25+ curated lifestyle amenities, and exceptional connectivity to the upcoming international infrastructure[cite: 2].
+                Spanning a majestic 3.5 Acres layout in Shedung, Panvel, Emperia Hillcrest features an iconic Ground + 17 Storey tower, 25+ curated lifestyle amenities, and exceptional connectivity to the upcoming international infrastructure.
               </p>
 
               <div className="mt-8">
@@ -73,27 +82,27 @@ export default function EmperiaHillcrestPage() {
                 <ul className="mt-4 space-y-2.5 text-[15px] text-[#334155]">
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>Ground + 17 Storey Tower across a 3.5 Acres grand layout[cite: 2]</span>
+                    <span>Ground + 17 Storey Tower across a 3.5 Acres grand layout</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>Bespoke 1 &amp; 2 BHK luxury apartments with branded fittings[cite: 2]</span>
+                    <span>Bespoke 1 &amp; 2 BHK luxury apartments with branded fittings</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>25+ Stellar lifestyle &amp; wellness amenities[cite: 2]</span>
+                    <span>25+ Stellar lifestyle &amp; wellness amenities</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>Grand clubhouse, swimming pool &amp; open amphitheater[cite: 2]</span>
+                    <span>Grand clubhouse, swimming pool &amp; open amphitheater</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>Centrally located in Shedung, Panvel near major highways[cite: 2]</span>
+                    <span>Centrally located in Shedung, Panvel near major highways</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>MahaRERA Registered Project: <strong className="text-[#1e293b]">P52000052086</strong>[cite: 2]</span>
+                    <span>MahaRERA Registered Project: <strong className="text-[#1e293b]">P52000052086</strong></span>
                   </li>
                 </ul>
               </div>
@@ -111,7 +120,7 @@ export default function EmperiaHillcrestPage() {
               Project Configuration
             </h2>
             <p className="mt-4 max-w-2xl text-left text-[#607284]">
-              Thoughtfully planned spaces designed for modern lifestyles, convenience and comfort[cite: 2].
+              Thoughtfully planned spaces designed for modern lifestyles, convenience and comfort.
             </p>
           </div>
 
@@ -145,7 +154,7 @@ export default function EmperiaHillcrestPage() {
               Floor Plans
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-[#607284]">
-              Where Nature&apos;s Beauty Meets Architectural Brilliance[cite: 2]
+              Where Nature&apos;s Beauty Meets Architectural Brilliance
             </p>
           </div>
 
@@ -153,7 +162,7 @@ export default function EmperiaHillcrestPage() {
             <div className="group overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm transition hover:shadow-md">
               <div className="relative flex h-[240px] items-center justify-center bg-[#f2ede4] p-4">
                 <img
-                  src="https://emperiaworldprojects.com/images/hillcrest.webp"
+                  src="/hill1 bhk.png"
                   alt="1 BHK Floor Plan"
                   className="h-full w-full object-cover filter blur-[3px]"
                 />
@@ -166,7 +175,7 @@ export default function EmperiaHillcrestPage() {
               </div>
               <div className="border-t border-gray-100 bg-white py-3 text-center">
                 <p className="text-sm font-semibold text-[#293d4d]">
-                  1 BHK <span className="mx-1 font-normal text-gray-300">|</span> Luxury Residences[cite: 2]
+                  1 BHK <span className="mx-1 font-normal text-gray-300">|</span> Luxury Residences
                 </p>
               </div>
             </div>
@@ -174,7 +183,7 @@ export default function EmperiaHillcrestPage() {
             <div className="group overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm transition hover:shadow-md">
               <div className="relative flex h-[240px] items-center justify-center bg-[#f2ede4] p-4">
                 <img
-                  src="https://emperiaworldprojects.com/images/hillcrest.webp"
+                  src="/hill2 bhk.png"
                   alt="2 BHK Floor Plan"
                   className="h-full w-full object-cover filter blur-[3px]"
                 />
@@ -187,7 +196,7 @@ export default function EmperiaHillcrestPage() {
               </div>
               <div className="border-t border-gray-100 bg-white py-3 text-center">
                 <p className="text-sm font-semibold text-[#293d4d]">
-                  2 BHK <span className="mx-1 font-normal text-gray-300">|</span> Premium Residences[cite: 2]
+                  2 BHK <span className="mx-1 font-normal text-gray-300">|</span> Premium Residences
                 </p>
               </div>
             </div>
@@ -271,15 +280,29 @@ export default function EmperiaHillcrestPage() {
               </div>
             </div>
 
-            <div className="relative lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl bg-gray-100 shadow-md">
-                <img
-                  src="https://emperiaworldprojects.com/images/hillcrest.webp"
-                  alt="Emperia Hillcrest Amenities"
-                  className="h-[380px] w-full object-cover"
-                />
-              </div>
-            </div>
+            <div className="relative lg:col-span-6 h-[380px] overflow-hidden rounded-3xl">
+  <img
+    src={images[index]}
+    alt="Amenity"
+    className="h-full w-full object-cover"
+  />
+
+  {/* Left Arrow */}
+  <button
+    onClick={() => setIndex(index === 0 ? images.length - 1 : index - 1)}
+    className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-9 h-9 rounded-full text-lg"
+  >
+    ❮
+  </button>
+
+  {/* Right Arrow */}
+  <button
+    onClick={() => setIndex(index === images.length - 1 ? 0 : index + 1)}
+    className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-9 h-9 rounded-full text-lg"
+  >
+    ❯
+  </button>
+</div>
           </div>
         </div>
       </section>
@@ -301,44 +324,43 @@ export default function EmperiaHillcrestPage() {
       </section>
 
       {/* CONTACT / CTA */}
-      <section id="contact" className="my-10 bg-[#293d4d] px-6 py-16 text-white sm:my-14 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="text-left">
-            <SectionLabel text="CONTACT US" light />
-            <h2 className="mt-3 text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl md:text-5xl">
-              Experience Emperia Hillcrest
-            </h2>
-            <p className="mt-4 max-w-2xl text-left text-sm leading-relaxed text-white/80 sm:text-base">
-              Experience the perfect blend of natural tranquility and urban luxury at Emperia Hillcrest, Shedung, Panvel.
-            </p>
-          </div>
+     <section id="contact" className="my-10 bg-[#f8f9fa] border border-gray-100 px-6 py-16 text-slate-800 sm:my-14 lg:px-12 lg:py-20">
+  <div className="mx-auto max-w-[1200px]">
+    <div className="text-left text-black [&_*]:text-black">
+      <SectionLabel text="CONTACT US"  />
+      <h2 className="mt-3 text-3xl font-bold uppercase tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+        Experience Emperia Hillcrest
+      </h2>
+      <p className="mt-4 max-w-2xl text-left text-sm leading-relaxed text-slate-600 sm:text-base">
+        Experience the perfect blend of natural tranquility and urban luxury at Emperia Hillcrest, Shedung, Panvel.
+      </p>
+    </div>
 
-          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <a
-              href="tel:+919130553055"
-              className="inline-flex items-center justify-center rounded-full bg-[#b89058] px-7 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:bg-white hover:text-[#293d4d]"
-            >
-              Call +91 91 3055 3055
-            </a>
-            <button
-              onClick={() => setShowForm(true)}
-              className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3 text-sm font-medium text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-[#293d4d]"
-            >
-              Book Site Visit
-            </button>
-          </div>
+    <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+      <a
+        href="tel:+919130553055"
+        className="inline-flex items-center justify-center rounded-full bg-[#b89058] px-7 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:bg-[#a37c45]"
+      >
+        Call +91 91 3055 3055
+      </a>
+      <button
+        onClick={() => setShowForm(true)}
+        className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-medium text-slate-800 shadow-sm transition duration-300 hover:bg-slate-50 hover:border-slate-400"
+      >
+        Book Site Visit
+      </button>
+    </div>
 
-          <div className="mt-10 border-t border-white/15 pt-6 text-left">
-            <p className="text-xs uppercase tracking-[2px] text-white/60">
-              MahaRERA Registration No.
-            </p>
-            <p className="mt-1 text-base font-semibold tracking-wide text-[#d2b27e] sm:text-lg">
-              P52000052086
-            </p>
-          </div>
-        </div>
-      </section>
-
+    <div className="mt-10 border-t border-slate-200 pt-6 text-left">
+      <p className="text-xs uppercase tracking-[2px] text-slate-500 font-medium">
+        MahaRERA Registration No.
+      </p>
+      <p className="mt-1 text-base font-semibold tracking-wide text-[#b89058] sm:text-lg">
+        P52000052086
+      </p>
+    </div>
+  </div>
+</section>
       <Footer />
 
       {/* ENQUIRY MODAL */}

@@ -141,16 +141,15 @@ export default function AboutPage() {
 
           <div className="about-reference-copy">
 
-            <p className="about-kicker">
-              ABOUT US
-            </p>
+           <p className="text-black text-1xl md:text-2xl font-bold uppercase tracking-wider mb-6 mt-0">
+            ABOUT US
+          </p>
 
-            <h1>
-              More than real estate.
-              <br />
-              A standard you can trust.
-            </h1>
-
+          <h1 style={{ fontSize: "34px",  lineHeight: "1.3" }}>
+  More than real estate.
+  <br />
+  A standard you can trust.
+</h1>
             <p className="about-lead">
               Emperia World is a real estate developer
               focused on creating considered residential
@@ -162,10 +161,10 @@ export default function AboutPage() {
 
             <Link
               href="/about"
-              className="about-know-more inline-block mb-6"
+              className="inline-flex items-center gap-2 mb-6 mt-6 rounded-full bg-[#b89058] px-6 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#a37c45] hover:gap-3"
             >
-              Know More
-              <span>→</span>
+              <span>Know More</span>
+              <span className="transition-transform duration-300">→</span>
             </Link>
           </div>
 
@@ -178,63 +177,47 @@ export default function AboutPage() {
           NUMBERS
       ========================== */}
 
-      <section className="about-numbers">
+     <section className="about-numbers w-full py-12">
+  <div className="about-section-container mx-auto max-w-[1200px] px-4">
+    <div className="numbers-card relative overflow-hidden rounded-2xl mx-auto flex flex-col items-center justify-center text-center">
+      <img
+        src="/city_street.png"
+        alt="Mumbai city"
+        className="numbers-image absolute inset-0 h-full w-full object-cover"
+      />
 
-        <div className="about-section-container">
+      <div className="numbers-overlay absolute inset-0 bg-black/50" />
 
-          <div className="numbers-card">
+      <div className="numbers-content relative z-10 flex w-full flex-col items-center justify-center px-6 py-12 text-center text-white">
+        <p className="numbers-kicker text-sm font-semibold uppercase tracking-widest text-[#d2b27e] mb-6">
+          EMPERIA BY THE NUMBERS
+        </p>
 
-            <img
-              src="/city_street.png"
-              alt="Mumbai city"
-              className="numbers-image"
-            />
-
-            <div className="numbers-overlay" />
-
-            <div className="numbers-content">
-
-              <p className="numbers-kicker">
-                EMPERIA BY THE NUMBERS
-              </p>
-
-              <div className="numbers-grid">
-
-                {stats.map((stat) => (
-
-                  <div
-                    className="number-item"
-                    key={stat.label}
-                  >
-
-                    <div className="number-value">
-
-                      <CountUp
-                        value={stat.value}
-                        suffix={stat.suffix}
-                      />
-
-                    </div>
-
-                    <div className="number-rule" />
-
-                    <p>
-                      {stat.label}
-                    </p>
-
-                  </div>
-
-                ))}
-
+        <div className="numbers-grid flex flex-wrap items-center justify-center gap-8 md:gap-16 w-full max-w-4xl mx-auto">
+          {stats.map((stat) => (
+            <div
+              className="number-item flex flex-col items-center justify-center text-center"
+              key={stat.label}
+            >
+              <div className="number-value text-3xl md:text-5xl font-bold tracking-tight">
+                <CountUp
+                  value={stat.value}
+                  suffix={stat.suffix}
+                />
               </div>
 
+              <div className="number-rule my-2 h-[2px] w-12 bg-[#d2b27e]/60" />
+
+              <p className="text-xs md:text-sm uppercase tracking-wider text-white/80">
+                {stat.label}
+              </p>
             </div>
-
-          </div>
-
+          ))}
         </div>
-
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
 
       {/* =========================

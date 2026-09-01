@@ -9,7 +9,7 @@ const projects = [
   {
     name: "ONE BCC",
     location: "Turbhe, Navi Mumbai",
-    image: "/property.png",
+    image: "/Onebcc.png",
     path: "/commercial/one-bcc",
   },
 ];

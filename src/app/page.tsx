@@ -94,16 +94,15 @@ export default function Home() {
       {/* =========================================================
           MAKE AN ENQUIRY
       ========================================================= */}
+      
       <section
-        id="enquiry"
-        className="bg-white pt-4 md:pt-6 pb-6 md:pb-8 px-6 md:px-10"
-      >
-        <div className="max-w-[1400px] mx-auto">
-
-          <EnquiryForm />
-
-        </div>
-      </section>
+      id="enquiry"
+      className="relative bg-light md:pt-6 pb-6  px-6 md:px-10"
+    >
+      <div className="mx-auto max-w-3xl">
+        <EnquiryForm />
+      </div>
+    </section>
 
       {/* =========================================================
           FOOTER

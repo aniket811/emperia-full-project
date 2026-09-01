@@ -4,34 +4,12 @@ import { FormEvent, useState } from "react";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mdeoobel";
 
-const projects = [
-  "Emperia Codename IBHQ Wagle Estate Thane",
-  "Emperia IBHQ Wagle Estate Thane West",
-  "Emperia World Thane West",
-  "Emperia World Wagle Estate",
-  "Emperia Garden",
-  "Diva Antilia",
-  "Evora",
-  "Gurukrupa Heights",
-  "Gurukrupa One",
-  "Vinayak Greens",
-  "Emperia Icon",
-  "Sun City",
-  "Emperia Akshar Rivergate",
-  "Happy Homes",
-  "Emperia Vandan Heights",
-  "Emperia Arham",
-  "9 Meraki",
-  "Emperia Hillcrest",
-  "Emperia The Capital",
-];
-
 export default function EnquiryForm() {
   const [form, setForm] = useState({
     full_name: "",
     phone: "",
     email: "",
-    project: "",
+    location: "",
     property_type: "",
     budget: "",
     message: "",
@@ -86,7 +64,7 @@ export default function EnquiryForm() {
           full_name: form.full_name.trim(),
           phone: form.phone.trim(),
           email: form.email.trim(),
-          project: form.project,
+          location: form.location.trim(),
           property_type: form.property_type,
           budget: form.budget.trim(),
           message: form.message.trim(),
@@ -109,7 +87,7 @@ export default function EnquiryForm() {
         full_name: "",
         phone: "",
         email: "",
-        project: "",
+        location: "",
         property_type: "",
         budget: "",
         message: "",
@@ -130,30 +108,31 @@ export default function EnquiryForm() {
   return (
     <section
       id="enquiry"
-      className="w-full bg-[#f7f6f2] px-5 py-16 md:px-10 lg:px-20"
+      className="w-full bg-light px-5 pt-0 md:px-10 lg:px-20"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-4xl">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-gray-500">
+          <p className="mb-2 text-black font-bold uppercase tracking-[0.25em] text-[#b89058]">
             Get In Touch
           </p>
 
-          <h2 className="text-4xl font-semibold tracking-tight text-black md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-5xl">
             Make an Enquiry
           </h2>
+          <div className="mx-auto mt-3 h-[2px] w-12 bg-[#b89058]" />
 
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+          <p className="mx-auto mt-4 max-w-xl text-sm text-slate-500 md:text-base">
             Tell us what you are looking for and our property experts
             will contact you shortly.
           </p>
         </div>
 
-        <div className="mx-auto max-w-4xl rounded-3xl bg-white p-6 shadow-xl md:p-10">
+        <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_15px_40px_rgba(0,0,0,0.06)] md:p-10">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               {/* Full Name */}
               <div>
-                <label className="mb-2 block text-sm font-medium text-gray-800">
+                <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-700">
                   Full Name <span className="text-red-500">*</span>
                 </label>
 
@@ -163,14 +142,14 @@ export default function EnquiryForm() {
                   value={form.full_name}
                   onChange={handleChange}
                   placeholder="Enter your full name"
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-black"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/40 px-4 py-3 text-sm text-slate-800 placeholder-slate-400 outline-none transition duration-200 focus:border-[#b89058] focus:bg-white focus:ring-2 focus:ring-[#b89058]/20"
                   required
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <label className="mb-2 block text-sm font-medium text-gray-800">
+                <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-700">
                   Mobile Number <span className="text-red-500">*</span>
                 </label>
 
@@ -181,14 +160,14 @@ export default function EnquiryForm() {
                   onChange={handleChange}
                   placeholder="10-digit mobile number"
                   maxLength={10}
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-black"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/40 px-4 py-3 text-sm text-slate-800 placeholder-slate-400 outline-none transition duration-200 focus:border-[#b89058] focus:bg-white focus:ring-2 focus:ring-[#b89058]/20"
                   required
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="mb-2 block text-sm font-medium text-gray-800">
+                <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-700">
                   Email Address
                 </label>
 
@@ -198,35 +177,29 @@ export default function EnquiryForm() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="example@email.com"
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-black"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/40 px-4 py-3 text-sm text-slate-800 placeholder-slate-400 outline-none transition duration-200 focus:border-[#b89058] focus:bg-white focus:ring-2 focus:ring-[#b89058]/20"
                 />
               </div>
 
-              {/* Project */}
+              {/* Location */}
               <div>
-                <label className="mb-2 block text-sm font-medium text-gray-800">
-                  Interested Project
+                <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-700">
+                  Preferred Location
                 </label>
 
-                <select
-                  name="project"
-                  value={form.project}
+                <input
+                  type="text"
+                  name="location"
+                  value={form.location}
                   onChange={handleChange}
-                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none transition focus:border-black"
-                >
-                  <option value="">Select Project</option>
-
-                  {projects.map((project) => (
-                    <option key={project} value={project}>
-                      {project}
-                    </option>
-                  ))}
-                </select>
+                  placeholder="e.g. Panvel, Thane, Navi Mumbai"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/40 px-4 py-3 text-sm text-slate-800 placeholder-slate-400 outline-none transition duration-200 focus:border-[#b89058] focus:bg-white focus:ring-2 focus:ring-[#b89058]/20"
+                />
               </div>
 
               {/* Property Type */}
               <div>
-                <label className="mb-2 block text-sm font-medium text-gray-800">
+                <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-700">
                   Property Type
                 </label>
 
@@ -234,7 +207,7 @@ export default function EnquiryForm() {
                   name="property_type"
                   value={form.property_type}
                   onChange={handleChange}
-                  className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 outline-none transition focus:border-black"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/40 px-4 py-3 text-sm text-slate-700 outline-none transition duration-200 focus:border-[#b89058] focus:bg-white focus:ring-2 focus:ring-[#b89058]/20"
                 >
                   <option value="">Select Property Type</option>
                   <option value="Residential">Residential</option>
@@ -247,7 +220,7 @@ export default function EnquiryForm() {
 
               {/* Budget */}
               <div>
-                <label className="mb-2 block text-sm font-medium text-gray-800">
+                <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-700">
                   Budget
                 </label>
 
@@ -257,14 +230,14 @@ export default function EnquiryForm() {
                   value={form.budget}
                   onChange={handleChange}
                   placeholder="e.g. ₹50 Lakh - ₹1 Crore"
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-black"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50/40 px-4 py-3 text-sm text-slate-800 placeholder-slate-400 outline-none transition duration-200 focus:border-[#b89058] focus:bg-white focus:ring-2 focus:ring-[#b89058]/20"
                 />
               </div>
             </div>
 
             {/* Message */}
             <div>
-              <label className="mb-2 block text-sm font-medium text-gray-800">
+              <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-700">
                 Message
               </label>
 
@@ -273,8 +246,8 @@ export default function EnquiryForm() {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Tell us what you are looking for..."
-                rows={5}
-                className="w-full resize-none rounded-xl border border-gray-300 px-4 py-3 outline-none transition focus:border-black"
+                rows={4}
+                className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50/40 px-4 py-3 text-sm text-slate-800 placeholder-slate-400 outline-none transition duration-200 focus:border-[#b89058] focus:bg-white focus:ring-2 focus:ring-[#b89058]/20"
               />
             </div>
 
@@ -293,21 +266,18 @@ export default function EnquiryForm() {
             )}
 
             {/* Submit */}
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full rounded-full bg-black px-6 py-4 text-base font-semibold text-white transition hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              {loading ? "Submitting..." : "Submit Enquiry →"}
-            </button>
+            <div className="text-center pt-2">
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full sm:w-auto min-w-[220px] rounded-full bg-[#b89058] px-8 py-3.5 text-sm font-semibold tracking-wide text-white shadow-md transition duration-300 hover:bg-[#a37c45] active:scale-95 disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                {loading ? "Submitting..." : "Submit Enquiry →"}
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </section>
   );
-}<a
-  href="#enquiry"
-  className="inline-flex rounded-full bg-black px-6 py-3 font-semibold text-white transition hover:bg-gray-800"
->
-  Make an Enquiry →
-</a>
+}

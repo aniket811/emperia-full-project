@@ -7,6 +7,16 @@ import Footer from "@/components/Footer";
 export default function NineMerakiPage() {
   const [showForm, setShowForm] = useState(false);
 
+  const [index, setIndex] = useState(0);
+
+const images = [
+  "/21.png",
+  "/22.png",
+  "/23.png",
+  "/24.png",
+  "/25.png",
+];
+
   return (
     <main className="bg-white text-[#2d4050]">
 
@@ -55,7 +65,7 @@ export default function NineMerakiPage() {
             {/* LEFT: ELEVATION IMAGE */}
             <div className="overflow-hidden rounded-2xl border border-gray-100 shadow-md lg:col-span-5">
               <img
-                src="https://emperiaworldprojects.com/images/meraki.webp"
+                src="/miraki.png"
                 alt="9 Meraki Panvel Building"
                 className="h-[520px] w-full object-cover transition duration-700 hover:scale-105"
               />
@@ -68,11 +78,11 @@ export default function NineMerakiPage() {
               </h2>
 
               <p className="mt-5 text-[16px] leading-relaxed text-[#64748b]">
-                9 Meraki is a thoughtfully designed residential-cum-commercial landmark situated in the thriving locale of Panvel[cite: 1]. Strategically located before Shedung Toll Naka along the Old Mumbai-Pune Highway[cite: 1], it connects seamlessly with the upcoming infrastructure of Mumbai 3.0[cite: 1].
+                9 Meraki is a thoughtfully designed residential-cum-commercial landmark situated in the thriving locale of Panvel. Strategically located before Shedung Toll Naka along the Old Mumbai-Pune Highway, it connects seamlessly with the upcoming infrastructure of Mumbai 3.0.
               </p>
 
               <p className="mt-4 text-[16px] leading-relaxed text-[#64748b]">
-                Spread across approximately 2 acres, the project features a Ground + 17 Storey tower offering modern residences, ground-floor high-street retail, and an exclusive 10th-floor recreational lifestyle deck[cite: 1].
+                Spread across approximately 2 acres, the project features a Ground + 17 Storey tower offering modern residences, ground-floor high-street retail, and an exclusive 10th-floor recreational lifestyle deck.
               </p>
 
               {/* PROJECT HALLMARKS */}
@@ -84,28 +94,28 @@ export default function NineMerakiPage() {
                 <ul className="mt-4 space-y-2.5 text-[15px] text-[#334155]">
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>Ground + 17 Storey iconic tower across ~2 Acres[cite: 1]</span>
+                    <span>Ground + 17 Storey iconic tower across ~2 Acres</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>Bespoke 1 &amp; 2 BHK residences with Jodi flat options[cite: 1]</span>
+                    <span>Bespoke 1 &amp; 2 BHK residences with Jodi flat options</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>45+ Curated lifestyle, wellness &amp; fitness amenities[cite: 1]</span>
+                    <span>45+ Curated lifestyle, wellness &amp; fitness amenities</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>Dedicated 10th Floor sky recreation level &amp; clubhouse[cite: 1]</span>
+                    <span>Dedicated 10th Floor sky recreation level &amp; clubhouse</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
-                    <span>High-Street retail convenience on the ground floor[cite: 1]</span>
+                    <span>High-Street retail convenience on the ground floor</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#e11d48]" />
                     <span>
-                      MahaRERA Registered Project: <strong className="text-[#1e293b]">P52000054448</strong>[cite: 1]
+                      MahaRERA Registered Project: <strong className="text-[#1e293b]">P52000054448</strong>
                     </span>
                   </li>
                 </ul>
@@ -126,7 +136,7 @@ export default function NineMerakiPage() {
               Project Configuration
             </h2>
             <p className="mt-4 max-w-2xl text-left text-[#607284]">
-              Thoughtfully planned spaces designed for modern lifestyles, convenience and comfort[cite: 1].
+              Thoughtfully planned spaces designed for modern lifestyles, convenience and comfort.
             </p>
           </div>
 
@@ -171,7 +181,7 @@ export default function NineMerakiPage() {
             <div className="group overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm transition hover:shadow-md">
               <div className="relative flex h-[240px] items-center justify-center bg-[#f2ede4] p-4">
                 <img
-                  src="https://emperiaworldprojects.com/images/meraki.webp"
+                  src="/hill1 bhk.png"
                   alt="1 BHK Floor Plan"
                   className="h-full w-full object-cover filter blur-[3px]"
                 />
@@ -193,7 +203,7 @@ export default function NineMerakiPage() {
             <div className="group overflow-hidden rounded-xl border border-gray-200/80 bg-white shadow-sm transition hover:shadow-md">
               <div className="relative flex h-[240px] items-center justify-center bg-[#f2ede4] p-4">
                 <img
-                  src="https://emperiaworldprojects.com/images/meraki.webp"
+                  src="/hill2 bhk.png"
                   alt="2 BHK Floor Plan"
                   className="h-full w-full object-cover filter blur-[3px]"
                 />
@@ -234,31 +244,31 @@ export default function NineMerakiPage() {
                 <ul className="mt-4 space-y-2.5 text-sm text-[#475569]">
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Swimming Pool[cite: 1]</span>
+                    <span>Swimming Pool</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Gym - Fitness Studio[cite: 1]</span>
+                    <span>Gym - Fitness Studio</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Meditation Room / Yoga Room[cite: 1]</span>
+                    <span>Meditation Room / Yoga Room</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Jogging &amp; Walking Track[cite: 1]</span>
+                    <span>Jogging &amp; Walking Track</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Multipurpose Court[cite: 1]</span>
+                    <span>Multipurpose Court</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Sauna Room &amp; Steam Room[cite: 1]</span>
+                    <span>Sauna Room &amp; Steam Room</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Kids Pool[cite: 1]</span>
+                    <span>Kids Pool</span>
                   </li>
                 </ul>
               </div>
@@ -270,46 +280,60 @@ export default function NineMerakiPage() {
                 <ul className="mt-4 space-y-2.5 text-sm text-[#475569]">
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Modern Clubhouse[cite: 1]</span>
+                    <span>Modern Clubhouse</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Star Gazing Telescope[cite: 1]</span>
+                    <span>Star Gazing Telescope</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Pool Side Deck[cite: 1]</span>
+                    <span>Pool Side Deck</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Zen Garden &amp; Gazebo[cite: 1]</span>
+                    <span>Zen Garden &amp; Gazebo</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Toddlers Play Area &amp; Play Garden[cite: 1]</span>
+                    <span>Toddlers Play Area &amp; Play Garden</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Indoor Games (Table Tennis, Carrom, Chess)[cite: 1]</span>
+                    <span>Indoor Games (Table Tennis, Carrom, Chess)</span>
                   </li>
                   <li className="flex items-center gap-2.5">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#d35445]" />
-                    <span>Mini Theater[cite: 1]</span>
+                    <span>Mini Theater</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* RIGHT: AMENITIES IMAGE */}
-            <div className="relative lg:col-span-6">
-              <div className="relative overflow-hidden rounded-3xl bg-gray-100 shadow-md">
-                <img
-                  src="https://emperiaworldprojects.com/images/meraki.webp"
-                  alt="9 Meraki Amenities"
-                  className="h-[380px] w-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-            </div>
+                      <div className="relative lg:col-span-6 h-[380px] overflow-hidden rounded-3xl">
+            <img
+              src={images[index]}
+              alt="Amenity"
+              className="h-full w-full object-cover"
+            />
+
+            {/* Left Arrow */}
+            <button
+              onClick={() => setIndex(index === 0 ? images.length - 1 : index - 1)}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-9 h-9 rounded-full text-lg"
+            >
+              ❮
+            </button>
+
+            {/* Right Arrow */}
+            <button
+              onClick={() => setIndex(index === images.length - 1 ? 0 : index + 1)}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-9 h-9 rounded-full text-lg"
+            >
+              ❯
+            </button>
+          </div>
           </div>
         </div>
       </section>
@@ -335,44 +359,43 @@ export default function NineMerakiPage() {
       {/* =====================================================
           CONTACT / CTA SECTION
       ===================================================== */}
-      <section id="contact" className="my-10 bg-[#293d4d] px-6 py-16 text-white sm:my-14 lg:px-12 lg:py-20">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="text-left">
-            <SectionLabel text="CONTACT US" light />
-            <h2 className="mt-3 text-3xl font-bold uppercase tracking-tight text-white sm:text-4xl md:text-5xl">
-              Experience 9 Meraki
-            </h2>
-            <p className="mt-4 max-w-2xl text-left text-sm leading-relaxed text-white/80 sm:text-base">
-              Experience the perfect blend of luxury, convenience and connectivity at 9 Meraki, Panvel.
-            </p>
-          </div>
+      <section id="contact" className="my-10 bg-[#f8f9fa] border border-gray-100 px-6 py-16 text-slate-800 sm:my-14 lg:px-12 lg:py-20">
+  <div className="mx-auto max-w-[1200px]">
+    <div className="text-left text-black [&_*]:text-black">
+      <SectionLabel text="CONTACT US" />
+      <h2 className="mt-3 text-3xl font-bold uppercase tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+        Experience 9 Meraki
+      </h2>
+      <p className="mt-4 max-w-2xl text-left text-sm leading-relaxed text-slate-500 sm:text-base">
+        Experience the perfect blend of luxury, convenience and connectivity at 9 Meraki, Panvel.
+      </p>
+    </div>
 
-          <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <a
-              href="tel:+918097515151"
-              className="inline-flex items-center justify-center rounded-full bg-[#b89058] px-7 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:bg-white hover:text-[#293d4d]"
-            >
-              Call +91 8097 51 51 51
-            </a>
-            <button
-              onClick={() => setShowForm(true)}
-              className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3 text-sm font-medium text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-[#293d4d]"
-            >
-              Book Site Visit
-            </button>
-          </div>
+    <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+      <a
+        href="tel:+918097515151"
+        className="inline-flex items-center justify-center rounded-full bg-[#b89058] px-7 py-3 text-sm font-semibold text-white shadow-md transition duration-300 hover:bg-[#a37c45]"
+      >
+        Call +91 8097 51 51 51
+      </a>
+      <button
+        onClick={() => setShowForm(true)}
+        className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-7 py-3 text-sm font-medium text-slate-800 shadow-sm transition duration-300 hover:bg-slate-50 hover:border-slate-400"
+      >
+        Book Site Visit
+      </button>
+    </div>
 
-          <div className="mt-10 border-t border-white/15 pt-6 text-left">
-            <p className="text-xs uppercase tracking-[2px] text-white/60">
-              MahaRERA Registration No.
-            </p>
-            <p className="mt-1 text-base font-semibold tracking-wide text-[#d2b27e] sm:text-lg">
-              P52000054448
-            </p>
-          </div>
-        </div>
-      </section>
-
+    <div className="mt-10 border-t border-slate-200 pt-6 text-left">
+      <p className="text-xs uppercase tracking-[2px] text-slate-500 font-medium">
+        MahaRERA Registration No.
+      </p>
+      <p className="mt-1 text-base font-semibold tracking-wide text-[#b89058] sm:text-lg">
+        P52000054448
+      </p>
+    </div>
+  </div>
+</section>
       {/* =====================================================
           FOOTER
       ===================================================== */}

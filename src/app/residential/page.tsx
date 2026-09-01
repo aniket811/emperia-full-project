@@ -12,13 +12,13 @@ const ongoingProjects = [
   {
     name: "9 Meraki",
     location: "Shedung, Panvel",
-    image: "https://emperiaworldprojects.com/images/meraki.webp",
+    image: "/miraki.png",
     slug: "9-meraki",
   },
   {
     name: "Emperia Hillcrest",
     location: "Shedung, Panvel",
-    image: "https://emperiaworldprojects.com/images/hillcrest.webp",
+    image: "hill.png",
     slug: "emperia-hillcrest",
   },
   /*

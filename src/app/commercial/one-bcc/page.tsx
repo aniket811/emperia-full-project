@@ -19,7 +19,7 @@ export default function ProjectPage() {
         className="relative min-h-[650px] overflow-hidden md:min-h-[750px]"
       >
         <img
-          src="/ca.png"
+          src="/one.png"
           alt="ONE BCC Business Corporate Center"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -67,7 +67,7 @@ export default function ProjectPage() {
             {/* Image */}
             <div className="overflow-hidden rounded-[28px]">
               <img
-                src="/images/one-bcc-building.webp"
+                src="/onebcc.png"
                 alt="ONE BCC Commercial Building"
                 className="h-[420px] w-full object-cover transition-transform duration-700 hover:scale-105 md:h-[550px]"
               />
@@ -245,14 +245,14 @@ export default function ProjectPage() {
           <div className="mx-auto mt-12 grid max-w-[900px] gap-8 md:grid-cols-2">
             {/* Plan 1 */}
             <PlanCard
-              image="/images/one-bcc-plan-1.webp"
+              image="/Hill1 bhk.png"
               title="Office Floor Plan"
               onEnquire={() => setShowForm(true)}
             />
 
             {/* Plan 2 */}
             <PlanCard
-              image="/images/one-bcc-plan-2.webp"
+              image="/Hill2 bhk.png"
               title="Office Floor Plan"
               onEnquire={() => setShowForm(true)}
             />
@@ -305,44 +305,44 @@ export default function ProjectPage() {
           CONTACT / CTA
       ========================================================= */}
       <section
-        id="contact"
-        className="mx-4 my-10 overflow-hidden rounded-[30px] bg-[#293d4d] px-6 py-16 text-white md:mx-6 md:px-10 lg:mx-10 lg:px-16 lg:py-20"
+  id="contact"
+  className="mx-4 my-10 overflow-hidden rounded-[30px] border border-gray-100 bg-[#f8f9fa] px-6 py-16 text-slate-800 md:mx-6 md:px-10 lg:mx-10 lg:px-16 lg:py-20"
+>
+  <div className="mx-auto max-w-[1250px]text-black [&_*]:text-black">
+    <SectionLabel
+      text="CONTACT US"
+      
+    />
+
+    <h2 className="mt-4 max-w-[850px] text-4xl font-bold uppercase leading-tight text-slate-900 md:text-6xl">
+      Experience
+      <br />
+      ONE BCC
+    </h2>
+
+    <p className="mt-6 max-w-[650px] text-base leading-8 text-slate-600 md:text-lg">
+      Discover a premium commercial destination created for ambitious
+      businesses and modern workspaces.
+    </p>
+
+    <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+      <a
+        href="tel:+919167406060"
+        className="inline-flex items-center justify-center rounded-full bg-[#b89058] px-8 py-4 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#a37c45]"
       >
-        <div className="mx-auto max-w-[1250px]">
-          <SectionLabel
-            text="CONTACT US"
-            light
-          />
+        Call +91 9167 406 060
+      </a>
 
-          <h2 className="mt-4 max-w-[850px] text-4xl font-bold uppercase leading-tight md:text-6xl">
-            Experience
-            <br />
-            ONE BCC
-          </h2>
-
-          <p className="mt-6 max-w-[650px] text-base leading-8 text-white/75 md:text-lg">
-            Discover a premium commercial destination created for ambitious
-            businesses and modern workspaces.
-          </p>
-
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="tel:+919167406060"
-              className="inline-flex items-center justify-center rounded-full bg-[#b89058] px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#293d4d]"
-            >
-              Call +91 9167 406 060
-            </a>
-
-            <button
-              type="button"
-              onClick={() => setShowForm(true)}
-              className="rounded-full border border-white/40 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#293d4d]"
-            >
-              Book a Site Visit
-            </button>
-          </div>
-        </div>
-      </section>
+      <button
+        type="button"
+        onClick={() => setShowForm(true)}
+        className="rounded-full border border-slate-300 bg-white px-8 py-4 text-sm font-semibold text-slate-800 shadow-sm transition-all duration-300 hover:border-slate-400 hover:bg-slate-50"
+      >
+        Book a Site Visit
+      </button>
+    </div>
+  </div>
+</section>
 
       {/* =========================================================
           FOOTER

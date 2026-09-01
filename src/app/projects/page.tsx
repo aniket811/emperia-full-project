@@ -19,6 +19,7 @@ type Project = {
   propertyType: PropertyType;
   status: string;
   price: string;
+  path:string;
 };
 
 const projects: Project[] = [
@@ -27,23 +28,36 @@ const projects: Project[] = [
     title: "9 Meraki",
     slug: "9-meraki",
     image:
-      "https://emperiaworldprojects.com/images/meraki.webp",
+      "/miraki.png",
     location: "Shedung, Panvel",
     propertyType: "Residential",
     status: "Booking Open",
     price: "On Request",
+    path: "/residential/project/9-meraki"
   },
   {
     number: "02",
     title: "Emperia Hillcrest",
     slug: "emperia-hillcrest",
     image:
-      "https://emperiaworldprojects.com/images/hillcrest.webp",
+      "/hill.png",
     location: "Shedung, Panvel",
     propertyType: "Residential",
     status: "Booking Open",
     price: "On Request",
+    path: "/residential/project/emperia-hillcrest",
   },
+  {
+  number: "03",
+  title: "ONE BCC",
+  slug: "one-bcc",
+  image: "/onebcc.png", 
+  location: "Turbhe, Navi Mumbai",
+  propertyType: "Commercial",
+  status: "Booking Open",
+  price: "On Request",
+  path: "/commercial/one-bcc",
+}
 ];
 
 const filters = [
@@ -238,15 +252,15 @@ export default function ProjectsPage() {
                     </div>
 
                   <div className="mt-6 flex w-full justify-center">
-                    <Link
-                      href={`/residential/project/${project.slug}`}
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-[#151515] px-5 py-2.5 text-xs font-semibold text-white shadow-sm transition-all duration-300 hover:bg-black hover:shadow-md group/btn"
-                    >
-                      <span>View Project</span>
-                      <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-black transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5">
-                        ↗
-                      </span>
-                    </Link>
+                   <Link
+  href={project.path}
+  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#151515] px-5 py-2.5 text-xs font-semibold text-white shadow-sm transition-all duration-300 hover:bg-black hover:shadow-md group/btn"
+>
+  <span>View Project</span>
+  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white text-[10px] font-bold text-black transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5">
+    ↗
+  </span>
+</Link>
                   </div>
                   </div>
                 </article>
